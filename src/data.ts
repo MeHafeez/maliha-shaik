@@ -1,14 +1,11 @@
-import cms from './assets/proj-cms.jpg'
-import stripe from './assets/proj-stripe.jpg'
-import fanduel from './assets/proj-fanduel.jpg'
-import go3 from './assets/proj-go3.jpg'
-import tabii from './assets/proj-tabii.jpg'
-import simpletv from './assets/proj-simpletv.jpg'
+// Every fact on the site comes from public/Maliha_Resume.pdf.
 
 export const contact = {
   name: 'Shaik Maliha',
+  first: 'Shaik',
+  last: 'Maliha',
   role: 'React Js Frontend Developer',
-  phone: '+91-8501823535',
+  phone: '+91 85018 23535',
   phoneHref: 'tel:+918501823535',
   email: 'maliha.shaik35@gmail.com',
   emailHref: 'mailto:maliha.shaik35@gmail.com',
@@ -18,42 +15,91 @@ export const contact = {
 }
 
 export const summary =
-  'Visionary Frontend Developer with 4 years of experience building responsive, accessible UI solutions using React, Material UI, HTML, CSS and modern JavaScript. Proven track record of designing reusable component libraries, improving performance and Core Web Vitals, and delivering user-centric interfaces that adhere to WCAG standards. Experienced in integrating frontend components with APIs, implementing client-side validation using Formik and Yup, and publishing a reusable Stripe payment integration as an NPM package. Effective collaborator across cross-functional teams with a proactive, innovation-driven approach.'
+  'Visionary frontend developer with four years of building responsive, accessible UI with React, Material UI and modern JavaScript. I design reusable component libraries, push Core Web Vitals forward, and ship user-centric interfaces that meet WCAG standards — from validated forms to secure payment flows.'
 
-export const skillGroups = [
+export const pillars = [
   {
-    title: 'Interface',
-    items: ['React', 'Redux', 'HTML', 'CSS', 'SCSS', 'JavaScript', 'Material UI'],
+    no: '01',
+    title: 'Reusable',
+    body: 'Component libraries built once, trusted everywhere — consistent layouts with React and Material UI.',
   },
   {
-    title: 'Integrity',
-    items: [
-      'Formik',
-      'Yup',
-      'Web Accessibility',
-      'Responsive Design',
-      'Cross-browser Compatibility',
-    ],
+    no: '02',
+    title: 'Accessible',
+    body: 'Interfaces that adhere to WCAG standards and behave across browsers and screen sizes.',
   },
   {
-    title: 'Throughput',
-    items: [
-      'Performance Optimization',
-      'Stripe Integration',
-      'Paypal Integration',
-      'NPM Packaging',
-    ],
+    no: '03',
+    title: 'Fast',
+    body: 'Performance work that improves page load times, Core Web Vitals and engagement.',
+  },
+  {
+    no: '04',
+    title: 'Secure',
+    body: 'Payment-grade UI: Stripe and PayPal integrations, validations and clear error states.',
   },
 ]
 
-export const projects = [
+export const stats = [
+  { value: 4, suffix: '+', label: 'Years shipping production UI' },
+  { value: 6, suffix: '', label: 'Products and platforms delivered' },
+  { value: 16, suffix: '', label: 'Core skills in daily rotation' },
+  { value: 1, suffix: '', label: 'Payment package published to npm' },
+]
+
+export const skillGroups = [
+  {
+    no: '01',
+    title: 'Interface',
+    note: 'What users see',
+    items: ['React', 'Redux', 'JavaScript', 'HTML', 'CSS', 'SCSS', 'Material UI'],
+  },
+  {
+    no: '02',
+    title: 'Integrity',
+    note: 'What users trust',
+    items: ['Formik', 'Yup', 'Web Accessibility', 'Responsive Design', 'Cross-browser Compatibility'],
+  },
+  {
+    no: '03',
+    title: 'Throughput',
+    note: 'What the business ships',
+    items: ['Performance Optimization', 'Stripe Integration', 'Paypal Integration', 'NPM Packaging'],
+  },
+]
+
+export const marquee = [
+  'React',
+  'Redux',
+  'Material UI',
+  'Formik + Yup',
+  'Stripe Elements',
+  'WCAG',
+  'Core Web Vitals',
+  'SCSS',
+  'NPM Packaging',
+  'Responsive Design',
+  'PayPal',
+]
+
+export type VisualKind = 'cms' | 'stripe' | 'iframe' | 'plans' | 'error' | 'stepper'
+
+export const projects: {
+  index: string
+  title: string
+  subtitle: string
+  org: string
+  tags: string[]
+  visual: VisualKind
+  bullets: string[]
+}[] = [
   {
     index: '01',
     title: 'EV_CMS',
     subtitle: 'Content Management System',
     org: 'Evergent Technologies',
     tags: ['React.js', 'Material UI', 'Formik', 'Yup'],
-    image: cms,
+    visual: 'cms',
     bullets: [
       'Developed and enhanced responsive user interfaces for CMS modules using React.js and Material UI.',
       'Built reusable UI components and implemented client-side form validation with Formik and Yup.',
@@ -61,11 +107,11 @@ export const projects = [
   },
   {
     index: '02',
-    title: 'Stripe Payment Gateway',
-    subtitle: 'NPM package (R&D)',
+    title: 'Stripe Gateway',
+    subtitle: 'Payment package on npm · R&D',
     org: 'Published package',
     tags: ['Stripe Elements', 'Stripe.js', 'NPM'],
-    image: stripe,
+    visual: 'stripe',
     bullets: [
       'Built a reusable Stripe payment component integrating Stripe Elements and Stripe.js for secure payment processing.',
       'Packaged and published the solution as an NPM package to enable reuse across React applications.',
@@ -77,45 +123,45 @@ export const projects = [
     subtitle: 'iFrame-based integration',
     org: 'TVOD · Subscriptions',
     tags: ['iFrame', 'TVOD', 'APIs'],
-    image: fanduel,
+    visual: 'iframe',
     bullets: [
-      'Implemented iFrame-based UI and integrated Add TVOD and Add Subscription APIs to enable purchases.',
+      'Implemented an iFrame-based UI and integrated the Add TVOD and Add Subscription APIs to enable purchases.',
     ],
   },
   {
     index: '04',
     title: 'Go3',
-    subtitle: 'Plan Selection · Registration',
-    org: 'Streaming product',
-    tags: ['Plan Selection', 'Registration'],
-    image: go3,
+    subtitle: 'Plan selection · Registration',
+    org: 'Streaming platform',
+    tags: ['Plan Selection', 'Registration', 'UX'],
+    visual: 'plans',
     bullets: [
       'Designed the Plan Selection and Registration pages, enhancing user experience and interface aesthetics.',
-      'Developed intuitive layouts to streamline the registration process and improve customer engagement.',
+      'Developed intuitive layouts to streamline registration and improve customer engagement.',
     ],
   },
   {
     index: '05',
     title: 'Tabii',
-    subtitle: 'Payments · Error states',
-    org: 'Streaming product',
-    tags: ['Payments', 'Error UI'],
-    image: tabii,
+    subtitle: 'Payments · Error handling',
+    org: 'Streaming platform',
+    tags: ['Payments', 'Error UI', 'Notifications'],
+    visual: 'error',
     bullets: [
-      'Designed and developed payment pages to enhance user experience and streamline transaction processes.',
-      'Created and implemented error pop-up message displays to improve error handling and user notification.',
+      'Designed and developed payment pages that streamline transaction processes.',
+      'Created error pop-up message displays to improve error handling and user notification.',
     ],
   },
   {
     index: '06',
     title: 'Simple TV',
-    subtitle: 'Multi-page UI · Validation',
-    org: 'Streaming product',
+    subtitle: 'Multi-page UI · Complex validation',
+    org: 'Streaming platform',
     tags: ['Formik', 'Yup', 'Multi-page'],
-    image: simpletv,
+    visual: 'stepper',
     bullets: [
-      'Designed multiple web pages ensuring user-centric interfaces.',
-      'Implemented complex form validation using Formik and Yup for enhanced data integrity and user experience.',
+      'Designed multiple web pages with user-centric interfaces.',
+      'Implemented complex form validation using Formik and Yup for data integrity and a smoother experience.',
     ],
   },
 ]
@@ -123,23 +169,45 @@ export const projects = [
 export const experience = {
   title: 'React Js Frontend Developer',
   company: 'Evergent Technologies',
-  dates: 'Jul 2022 – Sep 2026',
-  bullets: [
-    'Designed and implemented reusable UI components with a focus on responsive layouts and consistent user experience using React.js and Material UI.',
-    'Developed forms with client-side validation using Formik and Yup to improve data integrity and user feedback.',
-    'Integrated UI components with backend APIs and handled request/response flows, error handling, and appropriate UI feedback.',
-    'Worked on UI enhancements, bug fixes, cross-browser responsive design, and performance optimization to improve page load times and engagement.',
-    'Published a reusable Stripe payment integration as an NPM package that encapsulated Stripe Elements and Stripe.js for secure payments and reuse across applications.',
-    'Implemented payment-related UI components, validations, and responsive layouts for secure payment processing.',
-    'Contributed to iFrame-based subscription and TVOD integrations by integrating APIs and building UI flows for purchase and subscription management.',
+  dates: 'Jul 2022 — Sep 2026',
+  span: '4 yrs 3 mos',
+  items: [
+    {
+      key: 'Components',
+      text: 'Designed and implemented reusable UI components with a focus on responsive layouts and consistent user experience using React.js and Material UI.',
+    },
+    {
+      key: 'Validation',
+      text: 'Developed forms with client-side validation using Formik and Yup to improve data integrity and user feedback.',
+    },
+    {
+      key: 'APIs',
+      text: 'Integrated UI components with backend APIs and handled request/response flows, error handling and appropriate UI feedback.',
+    },
+    {
+      key: 'Performance',
+      text: 'Worked on UI enhancements, bug fixes, cross-browser responsive design and performance optimization to improve page load times and engagement.',
+    },
+    {
+      key: 'Open package',
+      text: 'Published a reusable Stripe payment integration as an NPM package that encapsulates Stripe Elements and Stripe.js for secure payments and reuse across applications.',
+    },
+    {
+      key: 'Payments',
+      text: 'Implemented payment-related UI components, validations and responsive layouts for secure payment processing.',
+    },
+    {
+      key: 'Subscriptions',
+      text: 'Contributed to iFrame-based subscription and TVOD integrations by integrating APIs and building UI flows for purchase and subscription management.',
+    },
   ],
 }
 
 export const education = [
   {
     year: '2018',
-    title: 'B.Tech / B.E. | Electrical and Electronics Engineering (EEE)',
-    school: 'Khammam Institute Of Technology And Sciences',
+    title: 'B.Tech — Electrical & Electronics Engineering',
+    school: 'Khammam Institute of Technology and Sciences',
     marks: '69%',
   },
   {
@@ -160,10 +228,8 @@ export const achievement =
   'Published a reusable Stripe payment integration as an NPM package to simplify payment integration across React applications.'
 
 export const nav = [
-  { href: '#signal', id: '01', label: 'Signal' },
-  { href: '#craft', id: '02', label: 'Craft' },
-  { href: '#transmission', id: '03', label: 'Transmission' },
-  { href: '#ledger', id: '04', label: 'Ledger' },
-  { href: '#studio', id: '05', label: 'Studio' },
-  { href: '#line', id: '06', label: 'Line' },
+  { href: '#about', label: 'About' },
+  { href: '#work', label: 'Work' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#contact', label: 'Contact' },
 ]

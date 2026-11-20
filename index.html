@@ -4,25 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaik Maliha — React Js Frontend Developer</title>
     <meta
       name="description"
-      content="Visionary Frontend Developer with 4 years of experience building responsive, accessible UI solutions using React, Material UI, HTML, CSS and modern JavaScript."
+      content="Shaik Maliha — React Js frontend developer in Hyderabad with 4+ years building reusable, accessible, payment-grade interfaces with React, Material UI, Formik and Yup."
     />
     <meta name="author" content="Shaik Maliha" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Shaik Maliha — React Js Frontend Developer" />
     <meta
       property="og:description"
-      content="Reusable interfaces. Accessible systems. Payment-grade craft. Hyderabad, India."
+      content="Reusable, accessible, payment-grade interfaces. 4+ years at Evergent Technologies. Hyderabad, India."
     />
     <meta property="og:image" content="/og-share.jpg" />
-    <meta name="theme-color" content="#100C09" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <script>
+      // Apply the saved theme before first paint (default: light).
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'dark') {
+          document.documentElement.dataset.theme = 'dark'
+          document.querySelector('meta[name="theme-color"]').content = '#0b0d12'
+        }
+      } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Syne:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Shaik Maliha — React Js Frontend Developer</title>
   </head>
   <body>
     <div id="root"></div>

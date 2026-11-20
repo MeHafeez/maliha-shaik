@@ -1,6 +1,6 @@
 # Shaik Maliha — Portfolio
 
-React Js frontend developer portfolio for Shaik Maliha. Content is taken from her resume: Evergent Technologies, payment and OTT product work, skills, education, and contact.
+Portfolio for Shaik Maliha, React Js frontend developer. Every fact on the site comes from `public/Maliha_Resume.pdf` (content lives in `src/data.ts`).
 
 ## Run locally
 
@@ -8,8 +8,6 @@ React Js frontend developer portfolio for Shaik Maliha. Content is taken from he
 npm install
 npm run dev
 ```
-
-Then open the URL Vite prints (usually `http://localhost:5173`).
 
 ## Build
 
@@ -20,4 +18,9 @@ npm run preview
 
 ## Stack
 
-Vite, React, TypeScript, GSAP (ScrollTrigger + matchMedia). Resume PDF is served from `public/Maliha_Resume.pdf`.
+Vite, React, TypeScript, GSAP — ScrollTrigger, ScrollSmoother, SplitText, TextPlugin and ScrambleTextPlugin.
+
+- `src/data.ts` — résumé content
+- `src/motion.ts` — all scroll and intro choreography (respects `prefers-reduced-motion`)
+- `src/components/Visuals.tsx` — the hero checkout specimen and the CSS-drawn project sketches (no images)
+- `src/components/Cursor.tsx` — custom cursor and magnetic buttons (fine pointers only)
